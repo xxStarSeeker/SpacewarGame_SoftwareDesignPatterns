@@ -1,4 +1,5 @@
-SpaceWar
+SpaceWar// reapload
+**FOR SOFTWARE DEDIGN PATTRENS PROJECT**
 ========
 
 Game build in Java
@@ -26,3 +27,5 @@ Instructions:
 Some screenshots: https://github.com/khrizenriquez/SpaceWar/tree/master/img/screenshots
 
 @khrizenriquez
+
+
