@@ -2,6 +2,9 @@ SpaceWar// reapload
 **FOR SOFTWARE DEDIGN PATTRENS PROJECT**
 ========
 
+
+*Raghad Ali Khan / 2110674*
+
 Game build in Java
 SpaceWar.java contains the main method
 "Java version minimum requirement 1.8 (Java 8)"
