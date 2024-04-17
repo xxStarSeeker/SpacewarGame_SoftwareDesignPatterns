@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Ship {
-
+    private static Ship instance;
     private int x;
     private int y;
     private Image img;
@@ -15,6 +15,13 @@ public class Ship {
         bullets = new ArrayList<>();
         img = new ImageIcon("src/ship.png").getImage();
 
+    }
+
+      public static Ship getInstance(int x, int y) {
+        if (instance == null) {
+            instance = new Ship(x, y);
+        }
+        return instance;
     }
 
     public void shot(){
