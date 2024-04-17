@@ -35,22 +35,38 @@ public class InvadersPanel extends JPanel implements ActionListener {
     }
 
     public void startGame(){
-        ship = new Ship(SCREEN_WIDTH/2, SCREEN_HEIGHT - 2*SCREEN_UNIT);
+       ship = Ship.getInstance(SCREEN_WIDTH / 2, SCREEN_HEIGHT - 2 * SCREEN_UNIT);
         timer = new Timer(DELAY,this);
         running = true;
         timer.start();
         aliens = new ArrayList<>();
         win = false;
 
-        for(int j = 1;j<4;j++) {
+       
+         /********APPLYIED THE PROTOTYPE PATTERN *******/
+        CloneFactory alienMaker = new CloneFactory();
+
+        for (int j = 1; j < 4; j++) {
             for (int i = 0; i < SCREEN_WIDTH / ALIEN_WIDTH - 2; i++) {
-                if(j%2 == 0)
-                    aliens.add(new Alien(i * 2 * SCREEN_UNIT + (SCREEN_UNIT - 10) * j , j*(SCREEN_UNIT+5)));
-                else
-                    aliens.add(new Alien(i * 2 * SCREEN_UNIT , j*(SCREEN_UNIT+5)));
+                Alien originalAlien = new Alien(i * 2 * SCREEN_UNIT + (SCREEN_UNIT - 10) * j, j * (SCREEN_UNIT + 5));
+                Alien clonedAlien = (Alien) alienMaker.getClone(originalAlien);
+                aliens.add(clonedAlien);
             }
         }
+        
         aliensDirection = 1;
+
+
+
+        // for(int j = 1;j<4;j++) {
+        //     for (int i = 0; i < SCREEN_WIDTH / ALIEN_WIDTH - 2; i++) {
+        //         if(j%2 == 0)
+        //             aliens.add(new Alien(i * 2 * SCREEN_UNIT + (SCREEN_UNIT - 10) * j , j*(SCREEN_UNIT+5)));
+        //         else
+        //             aliens.add(new Alien(i * 2 * SCREEN_UNIT , j*(SCREEN_UNIT+5)));
+        //     }
+        // }
+        // aliensDirection = 1;
     }
 
     public void paintComponent(Graphics g){
