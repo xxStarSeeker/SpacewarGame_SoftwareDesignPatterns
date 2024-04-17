@@ -3,6 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Ship {
+    //added instance to be static 
     private static Ship instance;
     private int x;
     private int y;
