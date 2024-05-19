@@ -1,4 +1,4 @@
-public class Bullet {
+public class Bullet implements ShotsTypes {
 
     public static final int BULLET_W = 4;
     public static final int BULLET_H = 10;
