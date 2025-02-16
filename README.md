@@ -8,5 +8,5 @@
 ### * Adapter Pattern --> Generated new type of bullets to excute this pattern which we call the deadly bullets and adapt 
 it to work with the orginal bullets
 ### * State Pattern --> for the state of the game so the state changes dynamically on runtime 
-### * Strategy state --> for the controls of the game which is left movement and right movment they both are ship movement strategy 
+ * Strategy state --> for the controls of the game which is left movement and right movment they both are ship movement strategy 
 
